@@ -1,0 +1,14 @@
+{
+  "name": "hostfully-exercise",
+  "description": "## Description of the Exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "cypress": "^13.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Dantas",
+  "license": "ISC"
+}

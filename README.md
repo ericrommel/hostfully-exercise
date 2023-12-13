@@ -2,7 +2,8 @@
 
 ## Description of the Exercise
 
-Write automated tests for the demo application available at https://computerdatabase.gatling.io/computers, focusing on, but not limited to, the following functionality:
+Write automated tests for the demo application available at <https://computerdatabase.gatling.io/computers>, focusing on, but not limited to, the following functionality:
+
 - Adding a new computer
 
 ### Expectations
@@ -14,7 +15,7 @@ more time than that.
 
 1. Come up with at least two scenarios for automation.
 2. Ensure that the tests cover the basic and edge cases for each functionality.
-3. [OPTIONAL]: Extra points if you use Gherkin syntax to write the scenarios.
+3. **[OPTIONAL]:** Extra points if you use Gherkin syntax to write the scenarios.
 
 ### Technical Criteria
 
@@ -29,10 +30,28 @@ software installations.
 a clear history of your work.
 3. Include a README file in your repository with clear instructions on how to run the
 tests.
-4. [OPTIONAL]: Provide a summary of your findings, including any issues you
+4. **[OPTIONAL]:** Provide a summary of your findings, including any issues you
 encountered and how you resolved them.
-5. [OPTIONAL]: Include a brief explanation of how you approached the task and why
+5. **[OPTIONAL]:** Include a brief explanation of how you approached the task and why
 you made certain decisions.
 
 ## Description of the Solution
 
+The solution was design in a simplest way to avoid spend more than 3h on it.
+
+### Manual settings
+
+Install and set configuration if needed for:
+
+- [Node.js](https://nodejs.org/en/download/) (version used: v19.4.0)
+- Cypress (version used: 13.6.1):
+
+    `$ npm install cypress --save-dev`
+
+- Run the tests:
+
+    `npm run tests`
+
+### Automated execution
+
+TBD
