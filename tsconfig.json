@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "https://computer-database.gatling.io",
     "target": "ES2017",
     "lib": ["ESNext", "dom"],
     "types": ["cypress", "node"],

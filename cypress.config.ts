@@ -25,11 +25,16 @@ export default defineConfig({
     specPattern: '**/*.feature',
     setupNodeEvents,
   },
+  video: true,
+  videosFolder: "cypress/report/evidences/videos",
+  screenshotOnRunFailure: true,
+  screenshotsFolder: "cypress/report/evidences/screenshots",
+  trashAssetsBeforeRuns: true,
   reporter: 'mochawesome',
   reporterOptions: {
-    reportDir: 'cypress/results',
-    overwrite: true,
-    html: true,
+    reportDir: 'cypress/report/mochareports',
+    overwrite: false,
+    html: false,
     json: true,
   }
 })

@@ -134,4 +134,7 @@ dist
 
 # report
 cypress/results/
+cypress/report/
+cypress/reports/
 cypress/screenshots/
+cypress/videos/
