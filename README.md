@@ -66,6 +66,10 @@ Install and set configuration if needed for:
 
     `npm run cypress-open`
 
+### CI Sample
+
+You can see the a CI sample for the Cypress testing in [GitHub](https://github.com/ericrommel/hostfully-exercise/actions/workflows/main.yml)
+
 ### Deliveries
 
 #### Summary of findings
