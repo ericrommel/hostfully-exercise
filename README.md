@@ -13,23 +13,23 @@ more time than that.
 
 ### Acceptance Criteria
 
-- [x] Come up with at least two scenarios for automation.
-- [x] Ensure that the tests cover the basic and edge cases for each functionality.
-- [x] **[OPTIONAL]:** Extra points if you use Gherkin syntax to write the scenarios.
+- [ ] Come up with at least two scenarios for automation.
+- [ ] Ensure that the tests cover the basic and edge cases for each functionality.
+- [ ] **[OPTIONAL]:** Extra points if you use Gherkin syntax to write the scenarios.
 
 ### Technical Criteria
 
-- [x] Use Cypress and JavaScript to write the test scripts (extra points for TypeScript).
-- [x] Your tests should run smoothly on a standard machine without requiring additional
+- [ ] Use Cypress and JavaScript to write the test scripts (extra points for TypeScript).
+- [ ] Your tests should run smoothly on a standard machine without requiring additional
 software installations.
 
 ### How to Deliver Your Solution
 
-- [X] Upload your solution to a GitHub repository.
-- [x] Use descriptive commit messages and, preferably, create multiple commits to provide a clear history of your work.
-- [x] Include a README file in your repository with clear instructions on how to run the tests.
-- [x] **[OPTIONAL]:** Provide a summary of your findings, including any issues you encountered and how you resolved them.
-- [x] **[OPTIONAL]:** Include a brief explanation of how you approached the task and why you made certain decisions.
+- [ ] Upload your solution to a GitHub repository.
+- [ ] Use descriptive commit messages and, preferably, create multiple commits to provide a clear history of your work.
+- [ ] Include a README file in your repository with clear instructions on how to run the tests.
+- [ ] **[OPTIONAL]:** Provide a summary of your findings, including any issues you encountered and how you resolved them.
+- [ ] **[OPTIONAL]:** Include a brief explanation of how you approached the task and why you made certain decisions.
 
 ## Description of the Solution
 
