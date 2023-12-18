@@ -131,3 +131,7 @@ dist
 
 # IDE
 .idea
+
+# report
+cypress/results/
+cypress/screenshots/

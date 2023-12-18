@@ -1,24 +1,22 @@
-import { faker } from '@faker-js/faker';
-
 export default class ComputerNew {
-  private _url = '/new'
+  readonly _url = '/new'
 
-  private pageName = '#main > h1'
-  private computerNameInput = '#name'
-  private introducedInput = '#introduced'
-  private discontinuedInput = '#discontinued'
-  private companyDropDownMenu = '#company'
-  private createThisComputerButton = '#main > form > div > input'
-  private createThisComputerButtonText = 'Create this computer'
-  private cancelButton = '#main > form > div > a'
-  private cancelButtonText = 'Cancel'
-  private errorAlert = '#main > form > fieldset > div.clearfix.error > div > span'
+  readonly pageName = '#main > h1'
+  readonly computerNameInput = '#name'
+  readonly introducedInput = '#introduced'
+  readonly discontinuedInput = '#discontinued'
+  readonly companyDropDownMenu = '#company'
+  readonly createThisComputerButton = '#main > form > div > input'
+  readonly createThisComputerButtonText = 'Create this computer'
+  readonly cancelButton = '#main > form > div > a'
+  readonly cancelButtonText = 'Cancel'
+  readonly errorAlert = '#main > form > fieldset > div.clearfix.error > div > span'
 
-  getRandomInt(max: number): number {
+  getRandomInt (max: number): number {
     return Math.floor(Math.random() * (max - 1)) + 1
   }
 
-  checkPageLoaded(): void {
+  checkPageLoaded (): void {
     cy.get('body').should('be.visible')
     cy.get(this.pageName).should('have.text', 'Add a computer')
     cy.get(this.computerNameInput).should('be.visible')
@@ -33,42 +31,42 @@ export default class ComputerNew {
       .should('have.text', this.cancelButtonText)
   }
 
-  checkAlertError(alertMessage: string): void {
+  checkAlertError (alertMessage: string): void {
     cy.get(this.errorAlert)
       .should('be.visible')
       .should('contain.text', alertMessage)
   }
 
-  load(): void {
+  load (): void {
     cy.visit(this._url)
     this.checkPageLoaded()
   }
 
-  setNewComputerName(text: string) {
+  setNewComputerName (text: string): void {
     cy.get(this.computerNameInput)
       .type(text)
       .should('have.value', text)
   }
 
-  setIntroducedDate(text: string) {
+  setIntroducedDate (text: string): void {
     cy.get(this.introducedInput)
       .type(text)
       .should('have.value', text)
   }
 
-  setDiscontinuedDate(text: string) {
+  setDiscontinuedDate (text: string): void {
     cy.get(this.discontinuedInput)
       .type(text)
       .should('have.value', text)
   }
 
-  setCompanyName(text: string) {
+  setCompanyName (text: string): void {
     cy.get(this.companyDropDownMenu)
       .select(text)
       .should('have.value', text)
   }
-  
-  getCreateButton() {
+
+  getCreateButton (): Cypress.Chainable<JQuery<HTMLElement>> {
     const createBtn = cy.get(this.createThisComputerButton)
     createBtn
       .should('be.visible')
@@ -76,7 +74,7 @@ export default class ComputerNew {
     return createBtn
   }
 
-  getCancelButton() {
+  getCancelButton (): Cypress.Chainable<JQuery<HTMLElement>> {
     const cancelBtn = cy.get(this.cancelButton)
     cancelBtn
       .should('be.visible')

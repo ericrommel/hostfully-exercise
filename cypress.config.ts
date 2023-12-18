@@ -21,8 +21,15 @@ async function setupNodeEvents(
 
 export default defineConfig({
   e2e: {
-    baseUrl: 'https://computer-database.gatling.io/',
+    baseUrl: 'https://computer-database.gatling.io',
     specPattern: '**/*.feature',
     setupNodeEvents,
   },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/results',
+    overwrite: true,
+    html: true,
+    json: true,
+  }
 })

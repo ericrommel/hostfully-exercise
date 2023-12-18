@@ -23,14 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-declare namespace Cypress {
-    interface Chainable {
-      getById(idAttribute: string): Chainable<JQuery<HTMLElement>>
-    }
-  }
-  
-  Cypress.Commands.add("getById", (selector) => {
-    return cy.get(`${selector}`)
-  })
-  

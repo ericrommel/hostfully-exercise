@@ -1,9 +1,9 @@
-import { Before, Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
+import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
-import ComputerList from '../../support/pages/computer-list.page'
-import ComputerNew from '../../support/pages/computer-new.page'
 import { faker } from '@faker-js/faker'
 import moment from 'moment'
+import ComputerList from '../../support/pages/computer-list.page'
+import ComputerNew from '../../support/pages/computer-new.page'
 
 const computerName = `${faker.word.sample()}-${faker.word.sample()}`
 const introduceValidFormatDate = moment().format('YYYY-MM-DD')
@@ -15,19 +15,19 @@ Given('I go to the Computers Database page', function () {
   this.browser.load()
 })
 
-Given('I see "Add a new computer" button', function (btnName: string) {
+Given('I see "Add a new computer" button', function () {
   this.addBtn = this.browser.getAddButton()
 })
 
-Given('I see "Filter by name" button', function (btnName: string) {
+Given('I see "Filter by name" button', function () {
   this.filterBtn = this.browser.getFilterButton()
 })
 
-Given('I click on "Add a new computer" button', function (btnName: string) {
+Given('I click on "Add a new computer" button', function () {
   this.addBtn.click()
 })
 
-Given('I click on "Filter by name" button', function (btnName: string) {
+Given('I click on "Filter by name" button', function () {
   this.browser.getFilterButton().click()
 })
 

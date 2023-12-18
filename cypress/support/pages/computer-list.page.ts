@@ -1,27 +1,27 @@
 export default class ComputerList {
-  private _url = '/computers'
+  readonly _url = '/computers'
   
-  private pageName = '#main > h1'
-  private alertMessage = '#main > div.alert-message.warning'
-  private addANewComputerButton = '#add'
-  private addANewComputerButtonText = 'Add a new computer'
-  private filterByNameInput = '#searchbox'
-  private filterByNamePlaceholder = 'Filter by computer name...'
-  private filterByNameButton = '#searchsubmit'
-  private filterByNameButtonText = 'Filter by name'
-  private firstRegister = '#main > table > tbody > tr:nth-child(1) > td:nth-child(1) > a'
-  private paginationTable = '#pagination'
+  readonly pageName = '#main > h1'
+  readonly alertMessage = '#main > div.alert-message.warning'
+  readonly addANewComputerButton = '#add'
+  readonly addANewComputerButtonText = 'Add a new computer'
+  readonly filterByNameInput = '#searchbox'
+  readonly filterByNamePlaceholder = 'Filter by computer name...'
+  readonly filterByNameButton = '#searchsubmit'
+  readonly filterByNameButtonText = 'Filter by name'
+  readonly firstRegister = '#main > table > tbody > tr:nth-child(1) > td:nth-child(1) > a'
+  readonly paginationTable = '#pagination'
 
-  getnumberOfComputersRegistered() {
+  getnumberOfComputersRegistered (): Cypress.Chainable<string> {
     return cy.get(this.pageName)
     .invoke('text')
     .then( (text) => {
-      text = text.trim().split(' ')[0]
+      return text.trim().split(' ')[0]
     })
     .as('numComputers')
   }
 
-  checkPageLoaded(alertMessageText?: string): void {
+  checkPageLoaded (alertMessageText?: string): void {
     cy.get('body').should('be.visible')
     cy.get(this.pageName)
       .should('be.visible')
@@ -42,38 +42,38 @@ export default class ComputerList {
     }
   }
 
-  load(): void {
+  load (): void {
     cy.visit(this._url)
     this.getnumberOfComputersRegistered()
     // cy.get('@numComputers').should('have.text', 574)
     this.checkPageLoaded()
   }
 
-  fillSearch(text: string): void {
+  fillSearch (text: string): void {
     cy.get(this.filterByNameInput).should('be.visible').type(text)
   }
 
-  search(): void {
+  search (): void {
     cy.get(this.filterByNameButton).should('be.visible').click()
   }
 
-  getAddButton() {
+  getAddButton (): Cypress.Chainable<JQuery<HTMLElement>> {
     const addBtn = cy.get(this.addANewComputerButton)
     addBtn.should('be.visible')
     return addBtn
   }
 
-  getFilterButton() {
+  getFilterButton (): Cypress.Chainable<JQuery<HTMLElement>> {
     const findBtn = cy.get(this.filterByNameButton)
     findBtn.should('be.visible')
     return findBtn
   }
 
-  searchAComputer(name: string) {
+  searchAComputer (name: string): void {
     cy.get(this.filterByNameInput).type(name).should('have.value', name)
   }
 
-  getFirstRegister(text: string) {
+  getFirstRegister (text: string): Cypress.Chainable<JQuery<HTMLElement>> {
     const register = cy.get(this.firstRegister)
     register
       .should('be.be.visible')
