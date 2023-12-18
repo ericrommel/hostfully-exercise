@@ -27,6 +27,7 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
+    "build": "npm install",
     "test": "cypress run",
     "test-report": "npm run pretest && npm run test && npm run postest",
     "lint-code": "eslint --fix \"{cypress,features,steps}/**/*.ts\"",
