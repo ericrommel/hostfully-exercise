@@ -13,27 +13,27 @@ more time than that.
 
 ### Acceptance Criteria
 
-- [ ] Come up with at least two scenarios for automation.
-- [ ] Ensure that the tests cover the basic and edge cases for each functionality.
-- [ ] **[OPTIONAL]:** Extra points if you use Gherkin syntax to write the scenarios.
+- [X] Come up with at least two scenarios for automation.
+- [X] Ensure that the tests cover the basic and edge cases for each functionality.
+- [X] **[OPTIONAL]:** Extra points if you use Gherkin syntax to write the scenarios.
 
 ### Technical Criteria
 
-- [ ] Use Cypress and JavaScript to write the test scripts (extra points for TypeScript).
-- [ ] Your tests should run smoothly on a standard machine without requiring additional
+- [X] Use Cypress and JavaScript to write the test scripts (extra points for TypeScript).
+- [X] Your tests should run smoothly on a standard machine without requiring additional
 software installations.
 
 ### How to Deliver Your Solution
 
-- [ ] Upload your solution to a GitHub repository.
-- [ ] Use descriptive commit messages and, preferably, create multiple commits to provide a clear history of your work.
-- [ ] Include a README file in your repository with clear instructions on how to run the tests.
-- [ ] **[OPTIONAL]:** Provide a summary of your findings, including any issues you encountered and how you resolved them.
-- [ ] **[OPTIONAL]:** Include a brief explanation of how you approached the task and why you made certain decisions.
+- [X] Upload your solution to a GitHub repository.
+- [X] Use descriptive commit messages and, preferably, create multiple commits to provide a clear history of your work.
+- [X] Include a README file in your repository with clear instructions on how to run the tests.
+- [X] **[OPTIONAL]:** Provide a summary of your findings, including any issues you encountered and how you resolved them.
+- [X] **[OPTIONAL]:** Include a brief explanation of how you approached the task and why you made certain decisions.
 
 ## Description of the Solution
 
-The solution was design in a simplest way to avoid spend more than 3h on it.
+The solution was designed in the simplest way to avoid spending more than 3 hours on it.
 
 ### General settings
 
@@ -68,7 +68,7 @@ Install and set configuration if needed for:
 
 ### CI Sample
 
-You can see the a CI sample for the Cypress testing in [GitHub](https://github.com/ericrommel/hostfully-exercise/actions/workflows/main.yml)
+You can see the CI sample for the Cypress testing in [GitHub](https://github.com/ericrommel/hostfully-exercise/actions/workflows/main.yml)
 
 ### Deliveries
 
