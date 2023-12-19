@@ -13,13 +13,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE,
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       # Simple way to run Cypress with the built-in Electron browser.
       # It takes the project's lock file, installs dependencies and caches them
       - name: Cypress run
         uses: cypress-io/github-action@v6
-      - run: npm run postest
-      
+
       # After the test run completes store videos and any screenshots
       - name: Save screenshot files
         uses: actions/upload-artifact@v4
@@ -35,9 +34,16 @@ jobs:
           name: cypress-videos
           path: cypress/report/evidences/videos
           if-no-files-found: warn
-      # Deploy report generated to GitHub pages
+
+          # Generate report
+      - name: Generate report
+        if: always()
+        run: npm run postest
+      
+      # Deploy report to GitHub pages
       - name: Deploy report
+        if: always()
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
             BRANCH: gh-pages
-            FOLDER: mochawesome-report
+            FOLDER: cypress/report/mochareports
