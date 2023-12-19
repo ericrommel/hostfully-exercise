@@ -30,6 +30,7 @@ jobs:
           if-no-files-found: warn
       - name: Save video files
         uses: actions/upload-artifact@v4
+        if: failure()
         with:
           name: cypress-videos
           path: cypress/report/evidences/videos
