@@ -54,11 +54,11 @@ Install and set configuration if needed for:
 
     `npm run test`
 
-- Generate final report after an execution (the final report generated is [cypress/report/mochareports/report_final.html](cypress/report/mochareports/report_final.html)):
+- Generate final report after an execution. It will be saved locally at [cypress/report/mochareports/report_final.html](cypress/report/mochareports/report_final.html):
 
     `npm run postest`
 
-- Run the tests with final report generation (the final report generated is [cypress/report/mochareports/report_final.html](cypress/report/mochareports/report_final.html)):
+- Run the tests with final report generation. It will be saved locally at [cypress/report/mochareports/report_final.html](cypress/report/mochareports/report_final.html):
 
     `npm run test-report`
 
@@ -66,15 +66,19 @@ Install and set configuration if needed for:
 
     `npm run cypress-open`
 
-### CI Sample
+### CI/CD Sample
 
-You can see the CI sample for the Cypress testing in [GitHub](https://github.com/ericrommel/hostfully-exercise/actions/workflows/main.yml)
+- You can see the CI sample for the Cypress testing in [GitHub](https://github.com/ericrommel/hostfully-exercise/actions/workflows/main.yml)
+- Artifacts (screenshots and videos) are being saved during the workflow
+- The final report is being deployed to GitHub Pages
+  Note: It's currently getting 404. Need to address and troubleshooting to fix.
+
 
 ### Deliveries
 
 #### Summary of findings
 
-##### Computers are not being real saved
+##### BUG-001: Computers are not being real saved
 
 - **Description:** The new computers are not being added even though the system shows that it was.
 - **Severity:** Critical
