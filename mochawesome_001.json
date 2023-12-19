@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 1,
-    "start": "2023-12-19T21:34:49.341Z",
-    "end": "2023-12-19T21:34:55.482Z",
-    "duration": 6141,
+    "start": "2023-12-19T21:35:41.532Z",
+    "end": "2023-12-19T21:35:47.832Z",
+    "duration": 6300,
     "testsRegistered": 2,
     "passPercent": 50,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "79235aa5-9c50-4c96-a184-34f3952229e1",
+      "uuid": "0a22bd08-d581-4443-88fc-c369f1dbb188",
       "title": "",
       "fullFile": "cypress/e2e/features/find-computer.feature",
       "file": "cypress/e2e/features/find-computer.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bbf23be5-a533-441a-b385-36437acd02b7",
+          "uuid": "bc12e2c1-c0bf-4844-8783-25b9aa419344",
           "title": "Find a computer",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Find the recent computer created",
               "fullTitle": "Find a computer Find the recent computer created",
               "timedOut": null,
-              "duration": 5637,
+              "duration": 5769,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#main > table > tbody > tr:nth-child(1) > td:nth-child(1) > a`, but never found it.\n    at ComputerList.getFirstRegister (https://computer-database.gatling.io/__cypress/tests?p=cypress/e2e/features/find-computer.feature:26044:20)\n    at Context.eval (https://computer-database.gatling.io/__cypress/tests?p=cypress/e2e/features/find-computer.feature:26198:22)\n    at Registry.runStepDefininition (https://computer-database.gatling.io/__cypress/tests?p=cypress/e2e/features/find-computer.feature:8583:48)\n    at Object.fn (https://computer-database.gatling.io/__cypress/tests?p=cypress/e2e/features/find-computer.feature:15050:43)\n    at runStepWithLogGroup (https://computer-database.gatling.io/__cypress/tests?p=cypress/e2e/features/find-computer.feature:14662:29)\n    at Context.eval (https://computer-database.gatling.io/__cypress/tests?p=cypress/e2e/features/find-computer.feature:15046:62)",
                 "diff": null
               },
-              "uuid": "2bd61d67-7b4a-47fd-956f-58ea223403a6",
-              "parentUUID": "bbf23be5-a533-441a-b385-36437acd02b7",
+              "uuid": "23049bcd-1fe6-42aa-89e5-4e27b64ce9af",
+              "parentUUID": "bc12e2c1-c0bf-4844-8783-25b9aa419344",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "Find a computer that is already registered",
               "fullTitle": "Find a computer Find a computer that is already registered",
               "timedOut": null,
-              "duration": 394,
+              "duration": 403,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -69,22 +69,22 @@
               "context": null,
               "code": "var _a3, _b, _c, _d, _e6;\nconst { remainingSteps, testCaseStartedId } = retrieveInternalSpecProperties();\ntaskTestCaseStarted(context, {\n  id: testCaseStartedId,\n  testCaseId,\n  attempt: attempt++,\n  timestamp: (0, messages_1.createTimestamp)()\n});\nwindow.testState = {\n  gherkinDocument,\n  pickles,\n  pickle\n};\nfor (const step of steps) {\n  if (step.hook) {\n    const hook = step.hook;\n    const testStepId = getTestStepId({\n      context,\n      pickleId: pickle.id,\n      hookIdOrPickleStepId: hook.id\n    });\n    cy.then(() => {\n      delete window.testState.pickleStep;\n      const start = (0, messages_1.createTimestamp)();\n      internalProperties.currentStepStartedAt = start;\n      taskTestStepStarted(context, {\n        testStepId,\n        testCaseStartedId,\n        timestamp: start\n      });\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      const options = {\n        pickle,\n        gherkinDocument,\n        testCaseStartedId\n      };\n      (0, cypress_1.runStepWithLogGroup)({\n        fn: () => registry2.runCaseHook(this, hook, options),\n        keyword: hook.keyword,\n        text: createStepDescription(hook)\n      });\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      const end = (0, messages_1.createTimestamp)();\n      taskTestStepFinished(context, {\n        testStepId,\n        testCaseStartedId,\n        testStepResult: {\n          status: messages.TestStepResultStatus.PASSED,\n          duration: (0, messages_1.duration)(start, end)\n        },\n        timestamp: end\n      }, isLastEl(steps, step));\n      remainingSteps.shift();\n    });\n  } else if (step.pickleStep) {\n    const pickleStep = step.pickleStep;\n    const testStepId = getTestStepId({\n      context,\n      pickleId: pickle.id,\n      hookIdOrPickleStepId: pickleStep.id\n    });\n    const text = (0, assertions_1.assertAndReturn)(pickleStep.text, \"Expected pickle step to have a text\");\n    const scenarioStep = (0, assertions_1.assertAndReturn)(context.astIdsMap.get((0, assertions_1.assertAndReturn)((_a3 = pickleStep.astNodeIds) === null || _a3 === void 0 ? void 0 : _a3[0], \"Expected to find at least one astNodeId\")), `Expected to find scenario step associated with id = ${(_b = pickleStep.astNodeIds) === null || _b === void 0 ? void 0 : _b[0]}`);\n    const argument = ((_c = pickleStep.argument) === null || _c === void 0 ? void 0 : _c.dataTable) ? new data_table_1.default(pickleStep.argument.dataTable) : ((_e6 = (_d = pickleStep.argument) === null || _d === void 0 ? void 0 : _d.docString) === null || _e6 === void 0 ? void 0 : _e6.content) ? pickleStep.argument.docString.content : void 0;\n    cy.then(() => {\n      window.testState.pickleStep = step.pickleStep;\n      const start = (0, messages_1.createTimestamp)();\n      internalProperties.currentStep = { pickleStep };\n      internalProperties.currentStepStartedAt = start;\n      taskTestStepStarted(context, {\n        testStepId,\n        testCaseStartedId,\n        timestamp: start\n      });\n      return cy.wrap(start, { log: false });\n    }).then((start) => {\n      const beforeStepHooks = registry2.resolveBeforeStepHooks(tags);\n      const afterStepHooks = registry2.resolveAfterStepHooks(tags);\n      const options = {\n        pickle,\n        pickleStep,\n        gherkinDocument,\n        testCaseStartedId,\n        testStepId\n      };\n      const beforeHooksChain = beforeStepHooks.reduce((chain, beforeStepHook) => {\n        return chain.then(() => (0, cypress_1.runStepWithLogGroup)({\n          keyword: \"BeforeStep\",\n          text: createStepDescription(beforeStepHook),\n          fn: () => registry2.runStepHook(this, beforeStepHook, options)\n        }));\n      }, cy.wrap({}, { log: false }));\n      return beforeHooksChain.then(() => {\n        try {\n          return (0, cypress_1.runStepWithLogGroup)({\n            keyword: (0, assertions_1.assertAndReturn)(\"keyword\" in scenarioStep && scenarioStep.keyword, \"Expected to find a keyword in the scenario step\"),\n            argument,\n            text,\n            fn: () => registry2.runStepDefininition(this, text, argument)\n          }).then((result) => {\n            return afterStepHooks.reduce((chain, afterStepHook) => {\n              return chain.then(() => (0, cypress_1.runStepWithLogGroup)({\n                keyword: \"AfterStep\",\n                text: createStepDescription(afterStepHook),\n                fn: () => registry2.runStepHook(this, afterStepHook, options)\n              }));\n            }, cy.wrap({}, { log: false })).then(() => {\n              return { start, result };\n            });\n          });\n        } catch (e29) {\n          if (e29 instanceof registry_1.MissingDefinitionError) {\n            throw new Error(createMissingStepDefinitionMessage(context, pickleStep, context.registry.parameterTypeRegistry));\n          } else {\n            throw e29;\n          }\n        }\n      });\n    }).then(({ start, result }) => {\n      var _a4, _b2, _c2;\n      const end = (0, messages_1.createTimestamp)();\n      if (result === \"pending\" || result === \"skipped\") {\n        if (result === \"pending\") {\n          taskTestStepFinished(context, {\n            testStepId,\n            testCaseStartedId,\n            testStepResult: {\n              status: messages.TestStepResultStatus.PENDING,\n              duration: (0, messages_1.duration)(start, end)\n            },\n            timestamp: end\n          }, isLastEl(steps, step));\n        } else {\n          taskTestStepFinished(context, {\n            testStepId,\n            testCaseStartedId,\n            testStepResult: {\n              status: messages.TestStepResultStatus.SKIPPED,\n              duration: (0, messages_1.duration)(start, end)\n            },\n            timestamp: end\n          }, isLastEl(steps, step));\n        }\n        remainingSteps.shift();\n        for (const skippedStep of remainingSteps) {\n          const hookIdOrPickleStepId = (0, assertions_1.assertAndReturn)((_b2 = (_a4 = skippedStep.hook) === null || _a4 === void 0 ? void 0 : _a4.id) !== null && _b2 !== void 0 ? _b2 : (_c2 = skippedStep.pickleStep) === null || _c2 === void 0 ? void 0 : _c2.id, \"Expected a step to either be a hook or a pickleStep\");\n          const testStepId2 = getTestStepId({\n            context,\n            pickleId: pickle.id,\n            hookIdOrPickleStepId\n          });\n          taskTestStepStarted(context, {\n            testStepId: testStepId2,\n            testCaseStartedId,\n            timestamp: (0, messages_1.createTimestamp)()\n          });\n          taskTestStepFinished(context, {\n            testStepId: testStepId2,\n            testCaseStartedId,\n            testStepResult: {\n              status: messages.TestStepResultStatus.SKIPPED,\n              duration: {\n                seconds: 0,\n                nanos: 0\n              }\n            },\n            timestamp: (0, messages_1.createTimestamp)()\n          }, isLastEl(remainingSteps, skippedStep));\n        }\n        for (let i49 = 0, count = remainingSteps.length; i49 < count; i49++) {\n          remainingSteps.pop();\n        }\n        cy.then(() => this.skip());\n      } else {\n        taskTestStepFinished(context, {\n          testStepId,\n          testCaseStartedId,\n          testStepResult: {\n            status: messages.TestStepResultStatus.PASSED,\n            duration: (0, messages_1.duration)(start, end)\n          },\n          timestamp: end\n        }, isLastEl(steps, step));\n        remainingSteps.shift();\n      }\n    });\n  }\n}",
               "err": {},
-              "uuid": "3917e70a-1f2b-4f43-9164-7f2faa0df1e0",
-              "parentUUID": "bbf23be5-a533-441a-b385-36437acd02b7",
+              "uuid": "3dc82250-0e7c-4b2b-a8eb-ef7954f2e48c",
+              "parentUUID": "bc12e2c1-c0bf-4844-8783-25b9aa419344",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3917e70a-1f2b-4f43-9164-7f2faa0df1e0"
+            "3dc82250-0e7c-4b2b-a8eb-ef7954f2e48c"
           ],
           "failures": [
-            "2bd61d67-7b4a-47fd-956f-58ea223403a6"
+            "23049bcd-1fe6-42aa-89e5-4e27b64ce9af"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 6031,
+          "duration": 6172,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
